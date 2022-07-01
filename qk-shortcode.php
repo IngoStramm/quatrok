@@ -5,8 +5,8 @@ function qk_calc_rendimento()
         <div class="qk-calc-rendimento">
 
             <p>
-                <button href="#" class="qk-calc-rendimento-btn-toggle active elementor-button elementor-size-sm" data-id="ramada" id="ramada">' . __('Malha Ramada', 'qk') . '</button>
-                <button href="#" class="qk-calc-rendimento-btn-toggle elementor-button elementor-size-sm" data-id="tubular" id="tubular">' . __('Malha Ramada', 'qk') . '</button>
+                <button href="#" class="qk-calc-rendimento-btn-toggle active" data-id="ramada" id="ramada">' . __('Malha Ramada', 'qk') . '</button>
+                <button href="#" class="qk-calc-rendimento-btn-toggle" data-id="tubular" id="tubular">' . __('Malha Ramada', 'qk') . '</button>
             </p>
 
             <input type="hidden" name="qk-calc-type" id="qk-calc-type" value="ramada">
