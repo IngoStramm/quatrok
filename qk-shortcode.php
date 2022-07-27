@@ -58,7 +58,7 @@ function qk_last_youtube_video()
     $json = json_decode(file_get_contents($url));
     $video_id = $json->items[0]->id->videoId;
     $video_embed = 'https://www.youtube.com/embed/' . $video_id;
-    $video_embed_iframe_responsive = '<div class="video-container"><iframe src="' . $video_embed . '" allowfullscreen></iframe></div>';
+    $video_embed_iframe_responsive = '<div class="video-container"><iframe src="' . $video_embed . '?controls=0" allowfullscreen></iframe></div>';
 
     return $video_embed_iframe_responsive;
 }
