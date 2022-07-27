@@ -1,0 +1,58 @@
+.qk-calc-rendimento {
+    h4,
+    p {
+        color: white;
+    }
+    p {
+        strong {
+            margin-right: 0.2em;
+            font-size: 2em;
+        }
+    }
+    input[type="text"],
+    input[type="number"],
+    .qk-calc-rendimento-input {
+        border-radius: 0;
+        border: 0;
+    }
+    button {
+        &.qk-calc-rendimento-btn-toggle {
+            border-radius: 0;
+            border: none;
+            color: white;
+            outline: white solid 1px;
+            &.active,
+            &:active,
+            &:focus,
+            &:hover {
+                background-color: var(--e-global-color-primary);
+                background-color: white;
+                color: var(--e-global-color-primary);
+                border: none;
+            }
+        }
+    }
+}
+
+.qk-calc-rendimento p strong {
+    margin-right: 0.2em;
+    font-size: 2em;
+}
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    &::after {
+        padding-top: 56.25%;
+        display: block;
+        content: "";
+    }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
