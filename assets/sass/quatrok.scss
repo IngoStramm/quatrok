@@ -25,11 +25,26 @@
             &:active,
             &:focus,
             &:hover {
-                background-color: var(--e-global-color-primary);
                 background-color: white;
                 color: var(--e-global-color-primary);
                 border: none;
             }
+        }
+    }
+    .qk-calc-rendimento-btn {
+        // --e-global-color-primary: #30358C;
+        padding: 8px 16px;
+        background-color: white;
+        color: var(--e-global-color-primary);
+        border-radius: 0;
+        border: none;
+        &.active,
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: var(--e-global-color-primary);
+            color: white;
+            outline: white solid 1px;
         }
     }
 }
