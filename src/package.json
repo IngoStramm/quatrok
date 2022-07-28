@@ -1,6 +1,6 @@
 {
   "name": "quatrok",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Plugin para o site do Quatro K",
   "main": "Gruntfile.js",
   "scripts": {

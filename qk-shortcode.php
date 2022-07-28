@@ -75,11 +75,11 @@ function qk_random_phone()
 
     if (!$telefones)
         return __('Nenhum número de telefone cadastrado', 'qk');
-        
+
     if (!is_array($telefones))
         return $telefones;
 
-    $random_index = rand(0, count($telefones));
+    $random_index = rand(0, count($telefones) - 1);
     return $telefones[$random_index];
 }
 
