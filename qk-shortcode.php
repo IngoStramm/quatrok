@@ -68,3 +68,19 @@ function qk_last_youtube_video()
 }
 
 add_shortcode('qk-last-youtube-video', 'qk_last_youtube_video');
+
+function qk_random_phone()
+{
+    $telefones = qk_get_option('telefones');
+
+    if (!$telefones)
+        return __('Nenhum número de telefone cadastrado', 'qk');
+        
+    if (!is_array($telefones))
+        return $telefones;
+
+    $random_index = rand(0, count($telefones));
+    return $telefones[$random_index];
+}
+
+add_shortcode('qk-telefone', 'qk_random_phone');

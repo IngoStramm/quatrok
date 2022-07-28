@@ -41,6 +41,23 @@ function qk_settings_metabox()
         'type'    => 'title',
         'after_field'  => 'qk_shortcodes_after_field',
     ));
+
+    $cmb_options->add_field(array(
+        'name'    => esc_html__('Números de telefone', 'qk'),
+        'id'      => 'title_3',
+        'type'    => 'title',
+    ));
+
+    $cmb_options->add_field(array(
+        'name'    => esc_html__('Número de telefone', 'qk'),
+        'id'      => 'telefones',
+        'type'    => 'text',
+        'repeatable' => true,
+        'attributes' => array(
+            'onkeyup' => 'qk_mask_fones(event);'
+        ),
+        'after_field'  => 'qk_mask_fones',
+    ));
 }
 
 add_action('cmb2_admin_init', 'qk_settings_metabox');
@@ -97,6 +114,32 @@ function qk_shortcodes_after_field()
                     }
                 })
             }
+        }
+    </script>
+<?php
+}
+
+function qk_mask_fones()
+{
+?>
+    <script>
+        function qk_mask_fones(event) {
+            const v = event.target.value;
+            let r = v.replace(/\D/g, "");
+            r = r.replace(/^0/, "");
+
+            if (r.length > 11) {
+                r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+            } else if (r.length > 10) {
+                r = r.replace(/^(\d\d)(\d{5})(\d{0,4}).*/, "($1) $2-$3");
+            } else if (r.length > 6) {
+                r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+            } else if (r.length > 2) {
+                r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+            } else if (v.trim() !== "") {
+                r = r.replace(/^(\d*)/, "($1");
+            }
+            event.target.value = r;
         }
     </script>
 <?php
