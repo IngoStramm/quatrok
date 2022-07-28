@@ -13,7 +13,7 @@ function qk_settings_metabox()
         'title'        => esc_html__('Quatro K', 'qk'),
         'object_types' => array('options-page'),
         'option_key'      => 'qk_settings', // The option key and admin menu page slug.
-        'icon_url'        => 'dashicons-youtube', // Menu icon. Only applicable if 'parent_slug' is left empty.
+        'icon_url'        => 'dashicons-ellipsis', // Menu icon. Only applicable if 'parent_slug' is left empty.
         'capability'        => 'edit_others_pages'
     ));
 
@@ -93,6 +93,7 @@ function qk_shortcodes_after_field()
 ?>
     <p>Shortcodes para usar nas páginas do site. Clique nos códigos para copiá-los.</p>
     <ul class="qk-shortcodes">
+        <li>Exibir um número de telefone aleatório entre os números cadastrados: <code title="Clique para copiar">[qk-telefone]</code></li>
         <li>Exibir a calculadora de rendimentos sem link de redirecionamento nos resultados: <code title="Clique para copiar">[qk-calc-rendimento]</code></li>
         <li>Exibir a calculadora de rendimentos com link de redirecionamento nos resultados (substitua os valores da "url" e do "text" para personalizá-los): <code title="Clique para copiar">[qk-calc-rendimento url="#" text="Fale conosco"]</code></li>
         <li>Exibir o último vídeo publicado: <code title="Clique para copiar">[qk-last-youtube-video]</code></li>
