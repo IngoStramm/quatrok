@@ -5,8 +5,12 @@
  *
  * @return string
  */
-function qk_calc_rendimento()
+function qk_calc_rendimento($atts)
 {
+    $a = shortcode_atts(array(
+        'url' => '',
+        'text' => __('Fale conosco', 'qk')
+    ), $atts);
     $content = '
         <div class="qk-calc-rendimento">
 
@@ -28,9 +32,9 @@ function qk_calc_rendimento()
                 <p>
                     <strong><span id="res-calc">0</span></strong>
                     <span>' . __('Metros por kg', 'qk') . '</span>
-                </p>
-            </div>
-
+                </p>';
+    $content .= $a['url'] ? '<a class="qk-calc-rendimento-btn btn button" href="' . $a['url'] . '">' . $a['text'] . '</a>' : '';
+    $content .= '</div>
         </div>
     ';
     return $content;

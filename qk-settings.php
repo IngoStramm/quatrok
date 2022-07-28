@@ -76,6 +76,8 @@ function qk_shortcodes_after_field()
 ?>
     <p>Shortcodes para usar nas páginas do site. Clique nos códigos para copiá-los.</p>
     <ul class="qk-shortcodes">
+        <li>Exibir a calculadora de rendimentos sem link de redirecionamento nos resultados: <code title="Clique para copiar">[qk-calc-rendimento]</code></li>
+        <li>Exibir a calculadora de rendimentos com link de redirecionamento nos resultados (substitua os valores da "url" e do "text" para personalizá-los): <code title="Clique para copiar">[qk-calc-rendimento url="#" text="Fale conosco"]</code></li>
         <li>Exibir o último vídeo publicado: <code title="Clique para copiar">[qk-last-youtube-video]</code></li>
     </ul>
     <style>
