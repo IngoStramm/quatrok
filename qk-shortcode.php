@@ -80,7 +80,7 @@ function qk_random_phone()
         return $telefones;
 
     $random_index = rand(0, count($telefones) - 1);
-    return $telefones[$random_index];
+    return '<span class="qk-random-phone">' . $telefones[$random_index] . '</span>';
 }
 
 add_shortcode('qk-telefone', 'qk_random_phone');

@@ -14,7 +14,12 @@ function qk_frontend_scripts()
     wp_register_script('quatrok-script', QK_URL . 'assets/js/quatrok' . $min . '.js', array('jquery'), '1.0.0', true);
 
     wp_enqueue_script('quatrok-script');
+    $telefones = qk_get_option('telefones');
+    $ajax_object = array(
+        'ajax_url'      => admin_url('admin-ajax.php'),
+        'telefones'     => $telefones
+    );
 
-    wp_localize_script('quatrok-script', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+    wp_localize_script('quatrok-script', 'ajax_object', $ajax_object);
     wp_enqueue_style('quatrok-style', QK_URL . 'assets/css/quatrok.css', array(), false, 'all');
 }

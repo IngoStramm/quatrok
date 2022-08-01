@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Calculadora
+
     const toggleBtns = document.querySelectorAll('.qk-calc-rendimento-btn-toggle');
     const inputs = document.querySelectorAll('.qk-calc-rendimento-input');
     const qkCalcTypeInput = document.getElementById('qk-calc-type');
@@ -69,4 +71,27 @@ document.addEventListener('DOMContentLoaded', function () {
     for (const input of inputs) {
         keypInputFunction(input);
     }
+
+    // Telefones
+
+    function qk_random_phone() {
+        const telefones = ajax_object.telefones;
+        let novoNumero;
+        // console.log(telefones.length);
+        if (telefones.length <= 1) {
+            // console.log(1);
+            novoNumero = telefones;
+        }
+        const min = 0;
+        const max = telefones.length - 1;
+        novoNumero = Math.floor(Math.random() * (max - min + 1) + min);
+        // console.log(telefones[novoNumero]);
+        const qkRandomPhoneSpans = document.querySelectorAll('.qk-random-phone');
+        for (const span of qkRandomPhoneSpans) {
+            span.innerText = telefones[novoNumero];
+        }
+    }
+
+    qk_random_phone();
+
 });
