@@ -5,6 +5,8 @@
  *
  * @return string
  */
+add_shortcode('qk-calc-rendimento', 'qk_calc_rendimento');
+
 function qk_calc_rendimento($atts)
 {
     $a = shortcode_atts(array(
@@ -16,7 +18,7 @@ function qk_calc_rendimento($atts)
 
             <p>
                 <button href="#" class="qk-calc-rendimento-btn-toggle active" data-id="ramada" id="ramada">' . __('Malha Ramada', 'qk') . '</button>
-                <button href="#" class="qk-calc-rendimento-btn-toggle" data-id="tubular" id="tubular">' . __('Malha Ramada', 'qk') . '</button>
+                <button href="#" class="qk-calc-rendimento-btn-toggle" data-id="tubular" id="tubular">' . __('Malha Tubular', 'qk') . '</button>
             </p>
 
             <input type="hidden" name="qk-calc-type" id="qk-calc-type" value="ramada">
@@ -39,7 +41,6 @@ function qk_calc_rendimento($atts)
     ';
     return $content;
 }
-add_shortcode('qk-calc-rendimento', 'qk_calc_rendimento');
 
 /**
  * qk_last_youtube_video
