@@ -4,7 +4,7 @@
  * Plugin Name: Quatro K
  * Plugin URI: https://agencialaf.com
  * Description: Plugin para o site do Quatro K.
- * Version: 0.0.14
+ * Version: 0.0.15
  * Author: Ingo Stramm
  * Text Domain: qk
  * License: GPLv2
