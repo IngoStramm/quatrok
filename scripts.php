@@ -21,5 +21,5 @@ function qk_frontend_scripts()
     );
 
     wp_localize_script('quatrok-script', 'ajax_object', $ajax_object);
-    wp_enqueue_style('quatrok-style', QK_URL . 'assets/css/quatrok.css', array(), '1.0.1', 'all');
+    wp_enqueue_style('quatrok-style', QK_URL . 'assets/css/quatrok.css', array(), '1.0.2', 'all');
 }
